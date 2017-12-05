@@ -56,4 +56,4 @@ social:
 #    share_link:
 
 exclude: [vendor, "Gemfile", "Gemfile.lock", "Rakefile", "LICENCE", "README.md", "staging", "production", "pages/about.md", "pages/portfolio.md"]
-gems: [jekyll-paginate]
+plugins: [jekyll-paginate]
