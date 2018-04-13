@@ -12,21 +12,32 @@
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "deploy": "node ./scripts/deploy.js",
+    "deploy:ci": "node ./scripts/deploy-ci.js"
   },
   "devDependencies": {
     "@types/jest": "^22.2.2",
     "@types/node": "^9.6.2",
     "@types/react": "^16.3.5",
     "@types/react-dom": "^16.0.4",
+    "aws-sdk": "^2.224.1",
+    "dotenv": "^5.0.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.3",
     "prettier": "^1.11.1",
+    "shelljs": "^0.8.1",
     "tslint-config-prettier": "^1.10.0",
     "typescript": "^2.8.1"
   },
   "lint-staged": {
-    "src/**/*.@(ts|tsx)": ["prettier --parser typescript --write", "git add"],
-    "src/**/*.@(js|jsx|json|css)": ["prettier --write", "git add"]
+    "src/**/*.@(ts|tsx)": [
+      "prettier --parser typescript --write",
+      "git add"
+    ],
+    "src/**/*.@(js|jsx|json|css)": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

@@ -8,4 +8,5 @@ cache:
 script:
   - yarn test
   - yarn build
-# TODO: add deploy
+after_success:
+  - yarn deploy:ci
