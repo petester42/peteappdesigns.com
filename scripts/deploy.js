@@ -70,12 +70,16 @@ const uploadDir = (dir, bucketName) => {
   );
 };
 
-const bucket = "peteappdesigns.com";
-const folder = "./build";
-
-emptyBucket(bucket)
-  .then(uploadDir(folder, bucket))
-  .catch(err => {
+async function run() {
+  const bucket = "peteappdesigns.com";
+  const folder = "./build";
+  try {
+    await emptyBucket(bucket);
+    await uploadDir(folder, bucket);
+  } catch (err) {
     shell.echo(err);
     shell.exit(1);
-  });
+  }
+}
+
+run();
