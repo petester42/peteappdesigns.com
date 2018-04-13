@@ -7,6 +7,7 @@ require("dotenv").config();
 const shell = require("shelljs");
 const path = require("path");
 const fs = require("fs");
+const mime = require("mime-types");
 const AWS = require("aws-sdk");
 
 const s3 = new AWS.S3();
@@ -23,7 +24,8 @@ const putObject = (bucketName, obj) => {
   const params = {
     Bucket: bucketName,
     Key: obj.Key,
-    Body: obj.Body
+    Body: obj.Body,
+    ContentType: obj.ContentType
   };
   return s3.putObject(params).promise();
 };
@@ -58,12 +60,17 @@ const s3BucketPath = (dir, filePath) => {
   }
 };
 
+const contentTypeForPath = filePath => {
+  return mime.lookup(filePath);
+};
+
 const uploadDir = (dir, bucketName) => {
   return Promise.all(
     filesInDirectory(dir).map(filePath => {
       let params = {
         Key: s3BucketPath(dir, filePath),
-        Body: fs.readFileSync(filePath)
+        Body: fs.readFileSync(filePath),
+        ContentType: contentTypeForPath(filePath)
       };
       return putObject(bucketName, params);
     })

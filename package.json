@@ -25,6 +25,7 @@
     "dotenv": "^5.0.1",
     "husky": "^0.14.3",
     "lint-staged": "^7.0.3",
+    "mime-types": "^2.1.18",
     "prettier": "^1.11.1",
     "shelljs": "^0.8.1",
     "tslint-config-prettier": "^1.10.0",
