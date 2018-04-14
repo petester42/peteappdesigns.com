@@ -1,25 +1,11 @@
 .App {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100%;
-  background: #0a7dff;
-  color: white;
 }
 
-.App-content {
-  display: flex;
-  flex-direction: column;
+.App-header {
+  height: 100%;
 }
 
-.App-logo {
-  height: 12rem;
-}
-
-.App-title {
-  font-size: 4rem;
-}
-
-.App-logo + .App-title {
-  margin-top: 20px;
+.App-section {
+  padding: 16px 0;
 }

@@ -1,0 +1,75 @@
+.Header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background: #0a7dff;
+  color: white;
+}
+
+.Header-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header-logo {
+  height: 12rem;
+}
+
+.Header-title {
+  font-size: 4rem;
+}
+
+.Header-logo + .Header-title {
+  margin-top: 20px;
+}
+
+.Header-arrow {
+  position: absolute;
+  bottom: 32px;
+  width: 32px;
+  height: 32px;
+  border: solid white;
+  box-sizing: border-box;
+  border-width: 0px 4px 4px 0px;
+  transform: rotate(45deg);
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: rotate(45deg) translateY(0px) translateX(0px);
+  }
+  to {
+    transform: rotate(45deg) translateY(-16px) translateX(-16px);
+  }
+}
+
+/* for-phone-only */
+@media (max-width: 599px) {
+  .Header-logo {
+    height: 8rem;
+  }
+
+  .Header-title {
+    font-size: 2rem;
+  }
+}
+
+/* for-tablet-portrait-up */
+@media (min-width: 600px) {
+}
+
+/* for-tablet-landscape-up */
+@media (min-width: 900px) {
+}
+
+/* for-desktop-up */
+@media (min-width: 1200px) {
+}
+
+/* for-big-desktop-up */
+@media (min-width: 1800px) {
+}

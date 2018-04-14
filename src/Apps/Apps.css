@@ -1,0 +1,42 @@
+.Apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  background: white;
+}
+
+.Apps-list-header {
+  font-size: 2rem;
+}
+
+.Apps-list {
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Apps-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+  margin: 16px;
+}
+
+.Apps-logo:hover {
+  color: #0a7dff;
+}
+
+.Apps-logo img {
+  width: 150px;
+  height: 150px;
+  border-radius: 32px;
+}
+
+.Apps-logo img + span {
+  margin-top: 8px;
+}

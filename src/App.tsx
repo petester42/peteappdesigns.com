@@ -1,18 +1,20 @@
 import * as React from "react";
 import "./App.css";
 
-// tslint:disable-next-line:no-var-requires
-const logo = require("./logo.svg");
+import { Apps } from "./Apps";
+import { Header } from "./Header";
 
 class App extends React.Component {
   public render() {
     return (
-      <div className="App">
-        <div className="App-content">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Pete App Designs</h1>
-        </div>
-      </div>
+      <main className="App">
+        <section className="App-header">
+          <Header />
+        </section>
+        <section className="App-section">
+          <Apps />
+        </section>
+      </main>
     );
   }
 }
